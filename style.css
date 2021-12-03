@@ -148,10 +148,10 @@ body {
     border-style: solid;
 }
 .footer {
-    color: white;
+    color: #E5E7EB;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 0;
+    padding: 40px 0;
     flex-shrink: 0;
 }
