@@ -1,91 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Landing Page</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="hero">
-        <div class="header-container">
-            <div class ="logo"> 
-            Spines and Stems
+    <head> 
+        <meta charset="UTF-8">
+        <title>Calculator</title> 
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div id="calcBody">
+            <div id="calcContent">
+                <div id="display">0</div>
+                <button id="clear">CE</button>
+                <button id="plusMinus">+/-</button>
+                <button id="percentage"> %</button>
+                <button id="division">/</button> 
             </div>
-        
-            <ul class="header-links">
-                <li>Books</li>
-                <li>Plants</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-        <div class="intro-body">
-            <div class="intro-container">
-                <div class="intro-title">Books, plants, and books about plants
+            <div id="numbersLayout">
+                <div id="numbers">
+                    <button class="number" value="7">7</button>
+                    <button class="number" value="8">8</button>
+                    <button class="number" value="9">9</button>
+                    <button id="multiplication">*</button>
+                    <button class="number" value="4">4</button>
+                    <button class ="number" value="5" >5</button>
+                    <button class ="number" value="6" >6</button>
+                    <button id="subtraction">-</button>
+                    <button class ="number" value="1" >1</button>
+                    <button class ="number" value="2" >2</button>
+                    <button class ="number" value="3" >3</button>
+                    <button id="addition">+</button>
+                    <button class="number" value="0" >0</button>
+                    <button id="decimal" value="." >.</button>
+                    <button id="equals">=</button> 
                 </div>
-                <div class="intro-text">Welcome to Spines and Stems! A dedicated to chronicling one girl's love for all things books and plants. Because life's too short to just hoard one thing or the other.
-                </div>
-                <div class="intro-button">
-                    <button>Sign up</button>
-                </div> 
-            </div>
-         <div class="intro-image">
-            <img src="planthero.jpeg" alt="">
-         </div>
-        </div>
-    </div>
-     <div class="card-info">Weekly updates on books, plants, and my pup</div>
-      <div class="cards"> 
-        <div class="card">
-            <img src="newplant.jpeg" alt="close-up of plant">
-             <div class="container">
-                <p>Tired of your houseplants dying? Check out my plants and plant care-taking tips! </p>
-            </div>
-         </div>
-         <div class="card">
-            <img src="newbook.jpeg" alt="book">
-             <div class="container">
-                <p>Wondering if that new book lives up to the hype? Check out my book reviews!</p>
-            </div>
-         </div>
-         <div class="card">
-            <img src="writing.jpeg" alt="journal and pen">
-                <div class="container">
-                <p>Monthly newsletters containing updates from my current reading, to-be-read lists, and "Best Books of the Season" recommendations</p>
-            </div>
-            </div>
-         <div class="card">
-            <img src="dog.jpeg" alt="my lil doggy">
-                <div class="container">
-                <p>And expect tons of photos from "Ted"! (He can't read but he's cute and tries his best)</p>
-                </div>
-         </div>
-        </div>
-    </div>     
-    <div class="quote">
-        <div class="quote-container">
-            <div class="quote-text">
-                "Rainy days should be spent at home with a cup of tea and a good book."
-            </div>
-            <div class="quote-source">
-                - Bill Patterson
             </div>
         </div>
-    </div>  
-    
-    <div class="action">
-        <div class="left">
-         <div class="action-header">Check out our monthly newsletter!</div>
-         <div class="action-body">Click the button to never miss a thing!</div>
-        </div>
-        <div class="right">
-         <button class="action-button">
-          Sign up
-         </button>
-        </div>
-        
-    </div>
-    <div class="footer">
-        Copyright © The Odin Project 2021
-    </div>
-</body>
+    </body>
 </html>
