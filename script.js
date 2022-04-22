@@ -13,6 +13,7 @@
 11) sometimes operate function is ran without an operator, leading to result = undefined. Occurs with periods / not specifying operator
 12) if result is in display, and new number is pressed, it adds it to the display result instead of a new number (for one num) (fixed)
 13) currently 3+3 = undefined. Check back to previous commits to find working version. (fixed 4/18)
+14) [4/21] If quotient contains more zeros than Math.round allows, result is zero. (Possible fix 4/21: See division function for further improvements)
 */
 
 const display = document.getElementById('display');
@@ -25,6 +26,22 @@ let firstNum = '';
 let secondNum = '';
 let operator = '';
 let result = operate(operator);
+
+//limit characters in display to 18
+let maxChars = 18;
+function limitCharInDisplay(e) {
+    if (firstNum.length > maxChars) {
+        display.innerText = display.innerText.substring(0, maxChars);
+        firstNum = display.innerText;
+    } else if (secondNum > maxChars) {
+        display.innerText = display.innerText.substring(0, maxChars);
+        secondNum = display.innerText;
+    } else if (result > maxChars) {
+        display.innerText = display.innerText.substring(0, maxChars);
+        result = display.innerText;
+    }
+}
+
 //add function
 const add = function add (firstNum, secondNum) {
     return Math.round((parseFloat(firstNum) + parseFloat(secondNum)) * 1000) / 1000;
@@ -45,7 +62,13 @@ console.log(multiply(2,5));
 
 //divide 
 const divide = function divide (firstNum, secondNum) {
-    return Math.round((parseFloat(firstNum) / parseFloat(secondNum)) * 1000) / 1000;
+    // return Math.round((parseFloat(firstNum) / parseFloat(secondNum)) * 1000) / 1000;
+    if (result > maxChars) {
+        limitCharInDisplay(result);
+        return firstNum / secondNum;
+    } else {
+        return Math.round((parseFloat(firstNum) / parseFloat(secondNum)) * 10000000) / 10000000;
+    }
 };
 console.log(divide(2,5));
 
@@ -92,20 +115,7 @@ function operate (operator, firstNum, secondNum) {
     }
 };
 
-//limit characters in display to 18
-let maxChars = 18;
-function limitCharInDisplay(e) {
-    if (firstNum.length > maxChars) {
-        display.innerText = display.innerText.substring(0, maxChars);
-        firstNum = display.innerText;
-    } else if (secondNum > maxChars) {
-        display.innerText = display.innerText.substring(0, maxChars);
-        secondNum = display.innerText;
-    } else if (result > maxChars) {
-        display.innerText = display.innerText.substring(0, maxChars);
-        result = display.innerText;
-    }
-}
+
 
 //applies click listeners to all buttons and runs calc(e) function on click
 const buttons = document.querySelectorAll('button');
@@ -296,6 +306,7 @@ ops.forEach(op => {
             secondNum = '';
             secondNum += e.target.value;
         } 
+        
         //do not run operator function if operator is empty
         // if (firstNum !== '' && secondNum !== '' && operator == '' && e.target.innerText == '=') {
         //     return;
