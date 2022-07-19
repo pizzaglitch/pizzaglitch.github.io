@@ -1,39 +1,182 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <meta charset="UTF-8">
-        <title>Calculator</title> 
-        <link rel="stylesheet" href="styles.css">
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <div id="calcBody">
-            <div id="calcContent">
-                <div id="display">0</div>
-                <button id="clear">CE</button>
-                <button id="plusMinus">+/-</button>
-                <button id="percentage"> %</button>
-                <button id="division">/</button> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-grid">
+            <div class="sidebar-title">
+                <img src="Icons/view-dashboard.svg">
+                <div>Dashboard</div>
             </div>
-            <div id="numbersLayout">
-                <div id="numbers">
-                    <button class="number" value="7">7</button>
-                    <button class="number" value="8">8</button>
-                    <button class="number" value="9">9</button>
-                    <button id="multiplication">*</button>
-                    <button class="number" value="4">4</button>
-                    <button class ="number" value="5" >5</button>
-                    <button class ="number" value="6" >6</button>
-                    <button id="subtraction">-</button>
-                    <button class ="number" value="1" >1</button>
-                    <button class ="number" value="2" >2</button>
-                    <button class ="number" value="3" >3</button>
-                    <button id="addition">+</button>
-                    <button class="number" value="0" >0</button>
-                    <button id="decimal" value="." >.</button>
-                    <button id="equals">=</button> 
+            <div class="sidebar-nav">
+                <img src="icons/home.svg">
+                <li>Home</li>
+                <img src="icons/account-cowboy-hat-outline.svg">
+                <li>Profile</li>
+                <img src="icons/message-reply-outline.svg">
+                <li>Messages</li>
+                <img src="icons/clock-time-five-outline.svg">
+                <li>History</li>
+                <img src="icons/text-box-multiple-outline.svg">
+                <li>Tasks</li>
+                <img src="icons/account-group-outline.svg">
+                <li>Communities</li>
+            </div>
+            <div class="sidebar-support">
+                <img src="icons/cog-outline.svg">
+                <li>Settings</li>
+                <img src="Icons/help-circle-outline.svg">
+                <li>Support</li>
+                <img src="Icons/shield-half-full.svg">
+                <li>Privacy</li>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="search-bar">
+            <img src="Icons/magnify.svg">
+            <input type="text"></input>
+        </div>
+        <div class="name">
+            <img src="Icons/bell-ring-outline.svg">
+            <img class = "header-account-image" src="Icons/icons8-cat-butt-64.png">
+            <div>Jim Lahey</div>
+        </div>
+        <div class="name-logo">
+            <div class="name-avatar">
+                <img class="name-avatar-img" src="Icons/icons8-cat-butt-64.png">
+            </div>
+            <div class="name-greeting">Hi there, </div>
+            <div class="name-user"> Jim Lahey (@SunnyvaleTPSupervisor)</div>
+        </div>
+        <div class="button-container">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="project-container">
+            <p>Your Projects</p>
+            <div class="card-container">
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non urna mattis sapien scelerisque laoreet nec et tortor.</p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Sed sed dignissim felis, iaculis ullamcorper urna. Morbi id arcu nec nibh facilisis viverra eget eget justo. In hac habitasse platea dictumst. </p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Nulla condimentum nulla sit amet ipsum interdum iaculis. Sed tempor nunc lectus, consectetur congue leo efficitur ac. Aliquam erat volutpat.</p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Suspendisse placerat eros ex, id dignissim felis congue ac. Nulla consequat libero in dui congue euismod sed sed nunc. Phasellus sollicitudin urna sed mauris finibus iaculis.</p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Sed vel dapibus velit. Phasellus finibus diam ac suscipit dapibus. Nam eros elit, vulputate et erat id, elementum sodales lectus. Ut iaculis non tortor quis imperdiet. Ut eu hendrerit turpis.</p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Project Title</p>
+                    <p class="project-info">Pellentesque in ipsum tortor. In mattis elit velit, vitae ultrices sapien maximus in. Vivamus id ante ut dolor placerat volutpat eget id lectus. Maecenas at sem blandit, placerat arcu nec, mattis nibh.</p>
+                    <div class="card-images">
+                        <img src="Icons/star-plus-outline.svg">
+                        <img src="Icons/eye-plus-outline.svg">
+                        <img src="Icons/source-fork.svg">
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+        <div class="announcement-container">
+            <p>Announcements</p>
+            <div class="announcement">
+                <div class="announcement-card">
+                <p class="announcement-title">Community Updates</p>
+                <p class="announcement-info">We're no strangers to love.
+                    You know the rules and so do I (do I).
+                    A full commitment's what I'm thinking of.
+                    You wouldn't get this from any other guy...</p>
+                </div>
+                <div class="announcement-card">
+                    <p class="announcement-title">Site Maintenance</p>
+                    <p class="announcement-info">I just wanna tell you how I'm feeling.
+                        Gotta make you understand...</p>
+                </div>
+                <div class="announcement-card">
+                    <p class="announcement-title">Updated Privacy Policy</p>
+                    <p class="announcement-info">Never gonna give you up.
+                        Never gonna let you down.
+                        Never gonna run around and desert you.
+                        Never gonna make you cry.
+                        Never gonna say goodbye.
+                        Never gonna tell a lie and hurt you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="trending-container">
+            <p>Trending</p>
+            <div class="trending-cards">
+                <img class="card-image" src="Icons/icons8-crab-64.png">
+                <div class="trending-card">
+                    <div>@Brule2004</div>
+                    <div class="account-name">Dr. Steve Brule</div>
+                </div>
+                <img class="card-image" src="Icons/icons8-frog-face-64.png">
+                <div class="trending-card">
+                    <div>@ActuallyAFrog</div>
+                    <div class="account-name">Mr. Ribbit</div>
+                </div>
+                <img class="card-image" src="Icons/icons8-pearl-64.png">
+                <div class="trending-card">
+                    <div>@Pearl46</div>
+                    <div class="account-name">Pearl the Pearl</div>
+                </div>
+                <img class="card-image" src="Icons/icons8-cat-butt-64.png">
+                <div class="trending-card">
+                    <div>@SunnyvaleTPSupervisor</div>
+                    <div class="account-name">Jim lahey</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
 </html>
